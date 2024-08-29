@@ -1,0 +1,46 @@
+{
+  "Student": [
+    {
+      "id": "6",
+      "name": "Mahesh Pund",
+      "course": "java",
+      "contact": 8756342165,
+      "batch": "June/2020"
+    },
+    {
+      "id": "8",
+      "name": "Mahesh sonttake",
+      "course": "java",
+      "contact": 9146436598,
+      "batch": "feb/2024"
+    },
+    {
+      "id": "9",
+      "name": "nilesh Lanke",
+      "course": "React",
+      "contact": 9106406598,
+      "batch": "Aug/2021"
+    },
+    {
+      "id": "9670",
+      "name": "shubham popat pund",
+      "course": "asdf",
+      "contact": "9146325498",
+      "batch": "March/2023"
+    },
+    {
+      "id": "2d64",
+      "name": "manish raj",
+      "course": "Java full stack",
+      "contact": "9146325498",
+      "batch": "June/2020"
+    },
+    {
+      "id": "9f0d",
+      "name": "asdf",
+      "course": "xcv",
+      "contact": "9146325498",
+      "batch": "June/2020"
+    }
+  ]
+}
