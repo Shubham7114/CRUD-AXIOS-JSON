@@ -17,7 +17,7 @@ const AddStudents = () => {
   // ======== Post Api =============================================================
   
   const AddStudentData =()=>{
-    axios.post(`http://localhost:8888/Student`,student).then(()=>{
+    axios.post(`http://localhost:5555/Student`,student).then(()=>{
       window.alert("Data Added Succesfully !")
     }).catch((err)=>{
       console.log(err);

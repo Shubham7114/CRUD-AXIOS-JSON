@@ -1,39 +1,40 @@
 import axios from "axios";
-import React, { useEffect , useState} from "react";
-import { useNavigate, useParams,Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams, Link } from "react-router-dom";
 
 const EditStudents = () => {
-    const nav = useNavigate()
-    const {id} = useParams()
-    const [student, setStudent]= useState({id:"",name:"",course:"",contact:"",batch:""})
 
-    // === getting Data In Json server==========================
+  const nav = useNavigate()
+  const { id } = useParams()
+  const [student, setStudent] = useState({ id: "", name: "", course: "", contact: "", batch: "" })
 
-    useEffect(()=>{
-        axios.get(`http://localhost:8888/Student/${id}`).then((res)=>{
-            setStudent(res.data)
-        }).catch((err)=>{
-                  console.log(err);         
-        })
-    },[])
+  // === getting Data In Json server==========================
 
-    // target Edited input to Use State ==========
+  useEffect(() => {
+    axios.get(`http://localhost:5555/Student/${id}`).then((res) => {
+      setStudent(res.data)
+    }).catch((err) => {
+      console.log(err);
+    })
+  }, [])
 
-    const  InputChangeHandler =(event)=>{
-        const {type,name,value}= event.target
-        setStudent({...student,[name]:value})
-    }
+  // target Edited input to Use State ==========
 
-    // Adding Edited Data to Json Server =========
-    const editStudentData =(event)=>{
-        event.preventDefault()
-        axios.put(`http://localhost:8888/Student/${id}`,student).then(()=>{
-          window.alert("Data Edited Succesfully !")
-          nav('/Dashstudent')
-        }).catch((err)=>{
-          console.log(err);
-        })
-      }
+  const InputChangeHandler = (event) => {
+    const { type, name, value } = event.target
+    setStudent({ ...student, [name]: value })
+  }
+
+  // Adding Edited Data to Json Server =========
+  const editStudentData = (event) => {
+    event.preventDefault()
+    axios.put(`http://localhost:5555/Student/${id}`, student).then(() => {
+      window.alert("Data Edited Succesfully !")
+      nav('/Dashstudent')
+    }).catch((err) => {
+      console.log(err);
+    })
+  }
 
   return (
     <div>

@@ -22,7 +22,7 @@ const DashStudent = () => {
 
   const fetchData = () => {
     axios
-      .get("http://localhost:8888/Student")
+      .get("http://localhost:5555/Student")
       .then((res) => {
         setStudent(res.data);
       })
@@ -36,7 +36,7 @@ const DashStudent = () => {
   const deletData = (id) => {
     if (window.confirm("Are you Sure Want to delet Data")) {
       axios
-        .delete(`http://localhost:8888/Student/${id}`)
+        .delete(`http://localhost:5555/Student/${id}`)
         .then(() => {
           alert("Data Deleted Succesfully !");
           fetchData();
